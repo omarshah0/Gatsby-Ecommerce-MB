@@ -8,6 +8,10 @@ import SEO from "../components/seo"
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
+    <Link to="/ladies/black-shafoon-kurtaa-ladies-2pcs">
+      Shalwaar Kameeez
+    </Link>{" "}
+    <br />
     <h1>Hi people</h1>
     <p>Welcome to your new Gatsby site.</p>
     <p>Now go build something great.</p>
