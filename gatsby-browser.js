@@ -1,7 +1,15 @@
-/**
- * Implement Gatsby's Browser APIs in this file.
- *
- * See: https://www.gatsbyjs.com/docs/browser-apis/
- */
+//3rd Party CSS
+import "./static/css/animate.css"
+import "./static/css/bootstrap.min.css"
+import "./static/css/magnific-popup.css"
+import "./static/css/core-style.css"
+import "./static/css/nouislider.css"
+import "./static/css/responsive.css"
+import "./static/css/themify-icons.css"
+// import "./src/styles/css/font-awesome.min.css"
+// import "./src/styles/css/jquery-ui.min.css"
+// import "./src/styles/css/owl.carousel.css"
 
-// You can delete this file if you're not using it
+import "./src/styles/common.css"
+import "./src/styles/mainPage.css"
+import "./src/styles/Header.css"

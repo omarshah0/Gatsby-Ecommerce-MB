@@ -1,26 +1,72 @@
 import React from "react"
-import { Link } from "gatsby"
+import { Link, useStaticQuery, graphql } from "gatsby"
+import logo from "../images/Logo.svg"
+import Img from "gatsby-image"
 
-import Layout from "../components/layout"
-import Image from "../components/image"
-import SEO from "../components/seo"
-
-const IndexPage = () => (
-  <Layout>
-    <SEO title="Home" />
-    <Link to="/ladies/black-shafoon-kurtaa-ladies-2pcs">
-      Shalwaar Kameeez
-    </Link>{" "}
-    <br />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
-    </div>
-    <Link to="/page-2/">Go to page 2</Link> <br />
-    <Link to="/using-typescript/">Go to "Using TypeScript"</Link>
-  </Layout>
-)
+const IndexPage = () => {
+  const data = useStaticQuery(graphql`
+    query {
+      MenImage: file(relativePath: { eq: "Men.webp" }) {
+        childImageSharp {
+          fluid(maxWidth: 1024) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      WomenImage: file(relativePath: { eq: "Women.webp" }) {
+        childImageSharp {
+          fluid(maxWidth: 1024) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      JuniorImage: file(relativePath: { eq: "Junior.webp" }) {
+        childImageSharp {
+          fluid(maxWidth: 1024) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+    }
+  `)
+  return (
+    <>
+      <h1 style={{ display: "none" }}>Meerab Boutique</h1>
+      <header>
+        <div className="header__logo">
+          <img src={logo} alt="Meerab Boutique" />
+        </div>
+      </header>
+      <main>
+        <div className="hero">
+          <Link to="/ladies">
+            <div className="hero__section">
+              <div className="hero__section__content">
+                <h2>Men</h2>
+              </div>
+              <Img fluid={data.MenImage.childImageSharp.fluid} />
+            </div>
+          </Link>
+          <Link to="/ladies">
+            <div className="hero__section">
+              <div className="hero__section__content">
+                <h2>Women</h2>
+              </div>
+              <Img fluid={data.WomenImage.childImageSharp.fluid} />
+            </div>
+          </Link>
+          <Link to="/ladies">
+            <div className="hero__section">
+              <div className="hero__section__content">
+                <h2>Juniors</h2>
+              </div>
+              <Img fluid={data.JuniorImage.childImageSharp.fluid} />
+            </div>
+          </Link>
+        </div>
+      </main>
+    </>
+  )
+}
 
 export default IndexPage

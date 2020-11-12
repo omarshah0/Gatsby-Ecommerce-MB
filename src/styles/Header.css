@@ -1,0 +1,38 @@
+nav {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+nav li {
+  list-style: none;
+  border-right: 1px solid rgba(60, 60, 60, 0.2);
+}
+
+nav li a {
+  padding: 0.8rem 1.4rem;
+  text-decoration: none;
+  font-family: "Scada", sans-serif;
+  font-size: 16px;
+  color: rgba(60, 60, 60, 0.4);
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+
+nav li a:hover, nav li a:focus {
+  color: #3c3c3c;
+}
+
+.header__shop {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  text-align: right;
+}
+/*# sourceMappingURL=Header.css.map */
