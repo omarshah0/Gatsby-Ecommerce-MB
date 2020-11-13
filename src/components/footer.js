@@ -81,7 +81,7 @@ function Footer() {
                 <h6>Subscribe to our newsletter</h6>
               </div>
               <div className="subscribtion_form">
-                <form action={e => e.preventDefault()} method="post">
+                <form action="" method="post">
                   <input
                     type="email"
                     name="mail"

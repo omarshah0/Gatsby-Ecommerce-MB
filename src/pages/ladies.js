@@ -2,10 +2,10 @@ import React from "react"
 import { Link, graphql } from "gatsby"
 import Img from "gatsby-image"
 import Layout from "../components/layout"
+import { connect } from "react-redux"
 
-function Ladies({ data }) {
-  console.log(data)
-  const Ladies = data.allContentfulLadies
+function Ladies({ data, cart, addToCart, removeFromCart }) {
+  const ladies = data.allContentfulLadies
   return (
     <Layout>
       <section className="new_arrivals_area section_padding_100_0 clearfix">
@@ -18,10 +18,18 @@ function Ladies({ data }) {
             </div>
           </div>
         </div>
-
+        {cart && <h2>Your Cart - Which is Under Construction </h2>}
+        {cart &&
+          cart.map((item, index) => (
+            <div key={index}>
+              <ul>
+                <li>{item}</li>
+              </ul>
+            </div>
+          ))}
         <div className="container">
           <div className="row karl-new-arrivals">
-            {Ladies.edges.map(({ node: lady }) => (
+            {ladies.edges.map(({ node: lady }) => (
               <div
                 className="col-12 col-sm-6 col-md-4 single_gallery_item"
                 key={lady.id}
@@ -44,9 +52,18 @@ function Ladies({ data }) {
                       <strong>{lady.name}</strong>
                     </p>
                   </Link>
-                  <Link to="/ladies" className="add-to-cart-btn">
+                  <button
+                    onClick={() => addToCart(lady.id)}
+                    className="add-to-cart-btn"
+                  >
                     ADD TO CART
-                  </Link>
+                  </button>
+                  <button
+                    onClick={() => removeFromCart(lady.id)}
+                    className="add-to-cart-btn"
+                  >
+                    Remove From Cart
+                  </button>
                 </div>
               </div>
             ))}
@@ -57,7 +74,18 @@ function Ladies({ data }) {
   )
 }
 
-export default Ladies
+const mapStateToProps = ({ cart }) => {
+  return { cart }
+}
+
+const mapDispatchToProps = dispatch => {
+  return {
+    addToCart: _id => dispatch({ type: `ADD_TO_CART`, payload: _id }),
+    removeFromCart: _id => dispatch({ type: `REMOVE_FROM_CART`, payload: _id }),
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Ladies)
 
 export const query = graphql`
   query Ladies {
