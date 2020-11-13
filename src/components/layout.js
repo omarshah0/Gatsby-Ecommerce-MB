@@ -7,7 +7,7 @@
 
 import React from "react"
 import Header from "./header"
-import Footer from "./Footer"
+// import Footer from "./Footer"
 import Discount from "./discount"
 const Layout = ({ children }) => {
   return (
@@ -15,7 +15,7 @@ const Layout = ({ children }) => {
       <Header />
       <Discount />
       <main>{children}</main>
-      <Footer />
+      {/* <Footer /> */}
     </>
   )
 }
