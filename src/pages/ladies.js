@@ -53,13 +53,13 @@ function Ladies({ data, cart, addToCart, removeFromCart }) {
                     </p>
                   </Link>
                   <button
-                    onClick={() => addToCart(lady.id)}
+                    onClick={() => addToCart(lady.contentful_id)}
                     className="add-to-cart-btn"
                   >
                     ADD TO CART
                   </button>
                   <button
-                    onClick={() => removeFromCart(lady.id)}
+                    onClick={() => removeFromCart(lady.contentful_id)}
                     className="add-to-cart-btn"
                   >
                     Remove From Cart
@@ -92,7 +92,7 @@ export const query = graphql`
     allContentfulLadies {
       edges {
         node {
-          id
+          contentful_id
           name
           slug
           images {
