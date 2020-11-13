@@ -7,15 +7,15 @@
 
 import React from "react"
 import Header from "./header"
-// import Footer from "./Footer"
 import Discount from "./discount"
+import Footer from "./footer"
 const Layout = ({ children }) => {
   return (
     <>
       <Header />
       <Discount />
       <main>{children}</main>
-      {/* <Footer /> */}
+      <Footer />
     </>
   )
 }
