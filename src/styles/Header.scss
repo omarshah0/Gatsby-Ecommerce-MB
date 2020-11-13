@@ -9,7 +9,7 @@ nav {
     a {
       padding: 0.8rem 1.4rem;
       text-decoration: none;
-      font-family: "Scada", sans-serif;
+      font-family: "Scada", sans-serif !important;
       font-size: 16px;
       color: rgba(60, 60, 60, 0.4);
       transition: all 0.4s ease;

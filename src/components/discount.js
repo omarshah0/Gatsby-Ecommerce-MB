@@ -1,12 +1,12 @@
 import React from "react"
-
+import { Link } from "gatsby"
 function Discount() {
   return (
     <section className="top-discount-area d-md-flex align-items-center">
       <div className="single-discount-area">
         <h5>Free Shipping &amp; Returns</h5>
         <h6>
-          <a href="#">BUY NOW</a>
+          <Link to="/">BUY NOW</Link>
         </h6>
       </div>
 

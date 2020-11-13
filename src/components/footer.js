@@ -1,5 +1,5 @@
 import React from "react"
-
+import { Link } from "gatsby"
 function Footer() {
   return (
     <footer className="footer_area">
@@ -14,12 +14,20 @@ function Footer() {
                 <p>
                   Copyright &copy;All rights reserved | Made with{" "}
                   <i className="fa fa-heart-o" aria-hidden="true"></i> by{" "}
-                  <a href="https://colorlib.com" target="_blank">
-                    Colorlib
+                  <a
+                    href="https://www.upwork.com/freelancers/~013324245774ea4e0e/"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    OmarFarooq
                   </a>{" "}
                   &amp; distributed by{" "}
-                  <a href="https://themewagon.com" target="_blank">
-                    ThemeWagon
+                  <a
+                    href="https://www.upwork.com/freelancers/~013324245774ea4e0e/"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    SoloShah
                   </a>
                 </p>
               </div>
@@ -30,19 +38,19 @@ function Footer() {
             <div className="single_footer_area">
               <ul className="footer_widget_menu">
                 <li>
-                  <a href="#">About</a>
+                  <Link to="/">About</Link>
                 </li>
                 <li>
-                  <a href="#">Blog</a>
+                  <Link to="/">Blog</Link>
                 </li>
                 <li>
-                  <a href="#">Faq</a>
+                  <Link to="/">Faq</Link>
                 </li>
                 <li>
-                  <a href="#">Returns</a>
+                  <Link to="/">Returns</Link>
                 </li>
                 <li>
-                  <a href="#">Contact</a>
+                  <Link to="/">Contact</Link>
                 </li>
               </ul>
             </div>
@@ -52,16 +60,16 @@ function Footer() {
             <div className="single_footer_area">
               <ul className="footer_widget_menu">
                 <li>
-                  <a href="#">My Account</a>
+                  <Link to="/">My Account</Link>
                 </li>
                 <li>
-                  <a href="#">Shipping</a>
+                  <Link to="/">Shipping</Link>
                 </li>
                 <li>
-                  <a href="#">Our Policies</a>
+                  <Link to="/">Our Policies</Link>
                 </li>
                 <li>
-                  <a href="#">Afiliates</a>
+                  <Link to="/">Afiliates</Link>
                 </li>
               </ul>
             </div>
@@ -73,7 +81,7 @@ function Footer() {
                 <h6>Subscribe to our newsletter</h6>
               </div>
               <div className="subscribtion_form">
-                <form action="#" method="post">
+                <form action={e => e.preventDefault()} method="post">
                   <input
                     type="email"
                     name="mail"
@@ -94,16 +102,32 @@ function Footer() {
           <div className="row">
             <div className="col-12">
               <div className="footer_social_area text-center">
-                <a href="#">
+                <a
+                  href="https://www.upwork.com/freelancers/~013324245774ea4e0e/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   <i className="fa fa-pinterest" aria-hidden="true"></i>
                 </a>
-                <a href="#">
+                <a
+                  href="https://www.upwork.com/freelancers/~013324245774ea4e0e/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   <i className="fa fa-facebook" aria-hidden="true"></i>
                 </a>
-                <a href="#">
+                <a
+                  href="https://www.upwork.com/freelancers/~013324245774ea4e0e/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   <i className="fa fa-twitter" aria-hidden="true"></i>
                 </a>
-                <a href="#">
+                <a
+                  href="https://www.upwork.com/freelancers/~013324245774ea4e0e/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   <i className="fa fa-linkedin" aria-hidden="true"></i>
                 </a>
               </div>
