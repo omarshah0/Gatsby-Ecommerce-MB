@@ -13,7 +13,7 @@ import "./src/styles/css/themify-icons.css"
 import "./src/styles/common.css"
 import "./src/styles/mainPage.css"
 import "./src/styles/Header.css"
-import "./src/styles/SingleProdcut.css"
+import "./src/styles/singleProdcut.css"
 
 import wrapWithProvider from "./wrap-with-provider"
 export const wrapRootElement = wrapWithProvider

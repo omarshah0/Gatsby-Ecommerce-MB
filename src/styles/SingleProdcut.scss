@@ -1,138 +1,139 @@
 .container {
-  @media (max-width: 768px) {
-    margin-left: 0 !important;
-    margin-right: 0 !important;
-    max-width: 100%;
-  }
-}
-
-.product {
-  display: flex;
-  margin-bottom: 100px;
-  @media (max-width: 768px) {
-    flex-direction: column;
-  }
-}
-
-.product__imageThumbnail {
-  flex: 0.1;
-  display: flex;
-  flex-direction: column;
-  gap: 7px;
-  margin-right: 5px;
-  overflow-x: scroll;
-  @media (max-width: 768px) {
-    flex-direction: row;
-    order: 2;
-    margin-bottom: 1rem;
-  }
-  .thumbnail-wrapper {
-    width: 70px;
-    cursor: pointer;
-  }
-}
-
-.product__image {
-  flex: 0.45;
-  @media (max-width: 768px) {
-    flex-direction: row;
-    order: 1;
-    margin-bottom: 1rem;
-  }
-  .gatsby-wrapper {
-    float: right;
-    width: 450px;
     @media (max-width: 768px) {
-      width: 100%;
+      margin-left: 0 !important;
+      margin-right: 0 !important;
+      max-width: 100%;
     }
   }
-}
-
-.product__info {
-  flex: 0.45;
-  padding-left: 2rem;
-  display: flex;
-  flex-direction: column;
-  @media (max-width: 768px) {
-    order: 3;
-    padding-left: 0;
+  
+  .product {
+    display: flex;
+    margin-bottom: 100px;
+    @media (max-width: 768px) {
+      flex-direction: column;
+    }
   }
-  h1,
-  h2 {
+  
+  .product__imageThumbnail {
+    flex: 0.1;
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    margin-right: 5px;
+    overflow-x: scroll;
+    @media (max-width: 768px) {
+      flex-direction: row;
+      order: 2;
+      margin-bottom: 1rem;
+    }
+    .thumbnail-wrapper {
+      width: 70px;
+      cursor: pointer;
+    }
+  }
+  
+  .product__image {
+    flex: 0.45;
+    @media (max-width: 768px) {
+      flex-direction: row;
+      order: 1;
+      margin-bottom: 1rem;
+    }
+    .gatsby-wrapper {
+      float: right;
+      width: 450px;
+      @media (max-width: 768px) {
+        width: 100%;
+      }
+    }
+  }
+  
+  .product__info {
+    flex: 0.45;
+    padding-left: 2rem;
+    display: flex;
+    flex-direction: column;
+    @media (max-width: 768px) {
+      order: 3;
+      padding-left: 0;
+    }
+    h1,
+    h2 {
+      font-family: "Scada", sans-serif;
+      font-weight: lighter;
+    }
+    h2 {
+      font-size: 1.5rem;
+    }
+    p {
+      font-family: "Scada", sans-serif;
+    }
+  }
+  
+  .product__quantity {
+    margin-bottom: 1rem;
+  }
+  
+  .product__cta {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 1rem;
+  }
+  
+  .ctaButton {
+    height: 3.4rem;
+    border: 2.3px solid black;
+    background-color: black;
+    color: white;
     font-family: "Scada", sans-serif;
-    font-weight: lighter;
+    cursor: pointer;
+    transition: all 0.3s ease;
   }
-  h2 {
-    font-size: 1.5rem;
-  }
-  p {
-    font-family: "Scada", sans-serif;
-  }
-}
-
-.product__quantity {
-  margin-bottom: 1rem;
-}
-
-.product__cta {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  margin-bottom: 1rem;
-}
-
-.ctaButton {
-  height: 3.4rem;
-  border: 2.3px solid black;
-  background-color: black;
-  color: white;
-  font-family: "Scada", sans-serif;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.Add_To_Cart:hover {
-  border: 2.3px solid #66cc99;
-  background-color: #66cc99;
-}
-
-.Add_To_WishList {
-  background-color: white;
-  color: black;
-  &:hover {
-    color: #66cc99;
+  
+  .Add_To_Cart:hover {
     border: 2.3px solid #66cc99;
+    background-color: #66cc99;
   }
-}
-
-.product__description {
-  margin-bottom: 1rem;
-  p {
-    font-weight: bold;
-    font-size: 14px;
-    margin-bottom: 10px;
+  
+  .Add_To_WishList {
+    background-color: white;
+    color: black;
+    &:hover {
+      color: #66cc99;
+      border: 2.3px solid #66cc99;
+    }
   }
-  span {
-    font-weight: lighter;
+  
+  .product__description {
+    margin-bottom: 1rem;
+    p {
+      font-weight: bold;
+      font-size: 14px;
+      margin-bottom: 10px;
+    }
+    span {
+      font-weight: lighter;
+    }
+    li {
+      font-size: 13px;
+      margin-bottom: 3px;
+    }
   }
-  li {
-    font-size: 13px;
-    margin-bottom: 3px;
+  
+  .product__social {
+    flex-grow: 1;
+    display: flex;
+    align-items: flex-end;
   }
-}
-
-.product__social {
-  flex-grow: 1;
-  display: flex;
-  align-items: flex-end;
-}
-
-.model__info {
-  font-size: 12px;
-  font-family: "Scada", sans-serif;
-}
-
-hr {
-  height: 2px; /* specify a height for this hr */
-  overflow: hidden;
-}
+  
+  .model__info {
+    font-size: 12px;
+    font-family: "Scada", sans-serif;
+  }
+  
+  hr {
+    height: 2px; /* specify a height for this hr */
+    overflow: hidden;
+  }
+  
