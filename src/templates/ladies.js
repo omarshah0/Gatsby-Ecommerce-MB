@@ -12,7 +12,7 @@ function Ladies({ data: { lady } }) {
       <div className="container">
         <div className="breadcumbs">BreadCumbs Goes Here</div>
         <div className="product">
-          {/* Product Images Thumbnails */}
+          {/* Product Images Thumbnailss */}
           <div className="product__imageThumbnail">
             {lady.images.map(image => (
               <div
