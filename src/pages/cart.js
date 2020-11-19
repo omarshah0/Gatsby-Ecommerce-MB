@@ -1,37 +1,31 @@
-import React, { useEffect } from "react"
-import Layout from "../components/layout"
-import { createClient } from "contentful"
-function Cart() {
-  useEffect(() => {
-    const orders = JSON.parse(localStorage.getItem("root"))
-    async function fetchData() {
-      try {
-        const client = await createClient({
-          space: `${process.env.CONTENTFUL_SPACE_ID}`,
-          accessToken: `${process.env.CONTENTFUL_ACCESS_TOKEN}`,
-          host: "cdn.contentful.com",
-        })
-        const entries = await client.getEntries({
-          content_type: "ladies",
-          "sys.id[in]": orders.cart,
-        })
-        console.log("Entries is ", entries)
-      } catch (error) {
-        console.log("Error Block")
-        console.error(error)
-      }
-    }
-    fetchData()
-  }, [])
+import React from "react"
+import { connect } from "react-redux"
 
+import Layout from "../components/layout"
+function Cart({ cart }) {
+  console.log(cart)
   return (
     <Layout>
       <h1>This is Cart</h1>
       <p>WAAAT</p>
-      <p>{process.env.CONTENTFUL_SPACE_ID}</p>
-      <p>{process.env.CONTENTFUL_ACCESS_TOKEN}</p>
+      {cart.map(item => (
+        <div key={item.contentful_id}>
+          <h2>{item.name}</h2>
+        </div>
+      ))}
     </Layout>
   )
 }
 
-export default Cart
+const mapStateToProps = ({ cart }) => {
+  return { cart }
+}
+
+// const mapDispatchToProps = dispatch => {
+//   return {
+//     addToCart: _id => dispatch({ type: `ADD_TO_CART`, payload: _id }),
+//     removeFromCart: _id => dispatch({ type: `REMOVE_FROM_CART`, payload: _id }),
+//   }
+// }
+
+export default connect(mapStateToProps, null)(Cart)

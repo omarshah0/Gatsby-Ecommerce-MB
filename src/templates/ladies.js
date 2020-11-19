@@ -14,10 +14,10 @@ function Ladies({ data: { lady } }) {
         <div className="product">
           {/* Product Images Thumbnailss */}
           <div className="product__imageThumbnail">
-            {lady.images.map(image => (
+            {lady.images.map((image, index) => (
               <div
                 className="thumbnail-wrapper"
-                key={image.id}
+                key={index}
                 onClick={() =>
                   setProductImage({ srcSet: image.fluid, title: image.title })
                 }

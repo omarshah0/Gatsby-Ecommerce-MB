@@ -4,7 +4,7 @@ import Img from "gatsby-image"
 import Layout from "../components/layout"
 import { connect } from "react-redux"
 
-function Ladies({ data, cart, addToCart, removeFromCart }) {
+function Ladies({ data, addToCart, removeFromCart }) {
   const ladies = data.allContentfulLadies
   return (
     <Layout>
@@ -18,26 +18,18 @@ function Ladies({ data, cart, addToCart, removeFromCart }) {
             </div>
           </div>
         </div>
-        {cart && <h2>Your Cart - Which is Under Construction </h2>}
-        {cart &&
-          cart.map((item, index) => (
-            <div key={index}>
-              <ul>
-                <li>{item}</li>
-              </ul>
-            </div>
-          ))}
         <div className="container">
           <div className="row karl-new-arrivals">
-            {ladies.edges.map(({ node: lady }) => (
+            {ladies.edges.map(({ node: lady }, index) => (
               <div
                 className="col-12 col-sm-6 col-md-4 single_gallery_item"
-                key={lady.id}
+                key={index}
               >
                 <div className="product-img">
                   <Img
                     fluid={{ ...lady.images[0].fluid, aspectRatio: 2 / 3 }}
                     alt={lady.name}
+                    key={lady.id}
                   />
                   <div className="product-quicview">
                     <Link to={`/ladies/${lady.slug}`}>
@@ -53,7 +45,7 @@ function Ladies({ data, cart, addToCart, removeFromCart }) {
                     </p>
                   </Link>
                   <button
-                    onClick={() => addToCart(lady.contentful_id)}
+                    onClick={() => addToCart(lady)}
                     className="add-to-cart-btn"
                   >
                     ADD TO CART
