@@ -36,7 +36,6 @@ function Ladies({ data: { lady } }) {
                 fadeIn={true}
               />
             </div>
-            {console.log("Title is ", productImage.title)}
           </div>
 
           {/* Product Information */}
