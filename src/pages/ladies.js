@@ -46,7 +46,7 @@ function Ladies({ data, cart, addToCart, removeFromCart }) {
                   </div>
                 </div>
                 <div className="product-description">
-                  <h4 className="product-price">$39.90</h4>
+                  <h4 className="product-price">{lady.price}</h4>
                   <Link to={`/ladies/${lady.slug}`}>
                     <p>
                       <strong>{lady.name}</strong>
@@ -95,6 +95,7 @@ export const query = graphql`
           contentful_id
           name
           slug
+          price
           images {
             fluid {
               ...GatsbyContentfulFluid
