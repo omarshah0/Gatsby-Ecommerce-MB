@@ -54,6 +54,7 @@ function Ladies({ data, addToCart, removeFromCart, cart }) {
                       <button
                         onClick={() => removeFromCart(lady.contentful_id)}
                         className="add-to-cart-btn custom-btn"
+                        type="button"
                       >
                         Remove From Cart
                       </button>
@@ -61,6 +62,7 @@ function Ladies({ data, addToCart, removeFromCart, cart }) {
                       <button
                         onClick={() => addToCart(lady)}
                         className="add-to-cart-btn custom-btn btn-add"
+                        type="button"
                       >
                         ADD TO CART
                       </button>
