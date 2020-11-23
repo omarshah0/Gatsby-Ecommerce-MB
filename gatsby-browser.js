@@ -14,6 +14,8 @@ import "./src/styles/common.css"
 import "./src/styles/mainPage.css"
 import "./src/styles/Header.css"
 import "./src/styles/singleProdcut.css"
+import "./src/styles/fonts.css"
+import "./src/styles/cart.css"
 
 import wrapWithProvider from "./wrap-with-provider"
 export const wrapRootElement = wrapWithProvider

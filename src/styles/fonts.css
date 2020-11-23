@@ -1,0 +1,11 @@
+.shop-icon {
+  font-size: 1.7rem;
+  color: #ff084e;
+  cursor: pointer;
+}
+
+.shop-icon.disabled {
+  color: rgba(173, 181, 189, 0.5);
+  cursor: not-allowed;
+}
+/*# sourceMappingURL=fonts.css.map */

@@ -13,3 +13,30 @@
 .breadcumbs {
   margin: 3rem 0;
 }
+
+.custom-btn {
+  width: 100%;
+  padding: 10px 0;
+  border: 2px solid rgba(253, 8, 78, 1);
+  cursor: pointer;
+  text-transform: uppercase;
+  &:focus,
+  &:active {
+    border: 2px solid #fd084e !important;
+    outline: none;
+  }
+  &.btn-add {
+    background-color: rgba(253, 8, 78, 0.8);
+    border: 2px solid #fd084e;
+    color: white;
+    transition: all 300ms ease;
+
+    &:hover {
+      color: white;
+      background-color: rgba(253, 8, 78, 1);
+    }
+    &:focus {
+      border: 2px solid #fd084e;
+    }
+  }
+}

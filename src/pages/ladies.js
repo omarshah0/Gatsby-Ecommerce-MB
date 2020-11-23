@@ -4,8 +4,9 @@ import Img from "gatsby-image"
 import Layout from "../components/layout"
 import { connect } from "react-redux"
 
-function Ladies({ data, addToCart, removeFromCart }) {
+function Ladies({ data, addToCart, removeFromCart, cart }) {
   const ladies = data.allContentfulLadies
+  console.log("render check")
   return (
     <Layout>
       <section className="new_arrivals_area section_padding_100_0 clearfix">
@@ -38,24 +39,33 @@ function Ladies({ data, addToCart, removeFromCart }) {
                   </div>
                 </div>
                 <div className="product-description">
-                  <h4 className="product-price">{lady.price}</h4>
+                  <h4 className="product-price">
+                    {lady.price ? `${lady.price} PKR` : "NAN"}
+                  </h4>
                   <Link to={`/ladies/${lady.slug}`}>
                     <p>
                       <strong>{lady.name}</strong>
                     </p>
                   </Link>
-                  <button
-                    onClick={() => addToCart(lady)}
-                    className="add-to-cart-btn"
-                  >
-                    ADD TO CART
-                  </button>
-                  <button
-                    onClick={() => removeFromCart(lady.contentful_id)}
-                    className="add-to-cart-btn"
-                  >
-                    Remove From Cart
-                  </button>
+                  <div className="cart-button">
+                    {cart.find(
+                      item => item.contentful_id === lady.contentful_id
+                    ) ? (
+                      <button
+                        onClick={() => removeFromCart(lady.contentful_id)}
+                        className="add-to-cart-btn custom-btn"
+                      >
+                        Remove From Cart
+                      </button>
+                    ) : (
+                      <button
+                        onClick={() => addToCart(lady)}
+                        className="add-to-cart-btn custom-btn btn-add"
+                      >
+                        ADD TO CART
+                      </button>
+                    )}
+                  </div>
                 </div>
               </div>
             ))}
@@ -72,7 +82,7 @@ const mapStateToProps = ({ cart }) => {
 
 const mapDispatchToProps = dispatch => {
   return {
-    addToCart: _id => dispatch({ type: `ADD_TO_CART`, payload: _id }),
+    addToCart: lady => dispatch({ type: `ADD_TO_CART`, payload: lady }),
     removeFromCart: _id => dispatch({ type: `REMOVE_FROM_CART`, payload: _id }),
   }
 }

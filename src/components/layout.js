@@ -13,7 +13,7 @@ const Layout = ({ children }) => {
   return (
     <>
       <Header />
-      <Discount />
+      {/* <Discount /> */}
       <main>{children}</main>
       <Footer />
     </>

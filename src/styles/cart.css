@@ -1,0 +1,169 @@
+.cart__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 20px;
+  margin-top: 50px;
+}
+
+@media (max-width: 768px) {
+  .cart__container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.cart__freeShipping,
+.cart__count {
+  background-color: #efefef;
+  padding: 1rem;
+}
+
+.cart__freeShipping h2,
+.cart__count h2 {
+  margin: 0;
+  font-size: 2rem;
+  font-weight: lighter;
+  letter-spacing: -3px;
+  font-family: "Scada", sans-serif !important;
+  color: #ff084e;
+}
+
+.cart__count {
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+.cart__count h2 {
+  color: black;
+  font-weight: bold;
+  font-size: 1.5rem;
+  letter-spacing: 0;
+}
+
+.Cart__Card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.Cart__Card .card__Image {
+  -webkit-box-flex: 0.2;
+      -ms-flex: 0.2;
+          flex: 0.2;
+  height: 200px;
+  overflow: hidden;
+}
+
+.Cart__Card .card__Description {
+  -webkit-box-flex: 0.6;
+      -ms-flex: 0.6;
+          flex: 0.6;
+}
+
+.Cart__Card .card__Description .cart__item__title {
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+.Cart__Card .card__Price {
+  -webkit-box-flex: 0.2;
+      -ms-flex: 0.2;
+          flex: 0.2;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  text-align: right;
+  font-family: "Scada", sans-serif !important;
+  color: #ff084e;
+  font-weight: bold;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+}
+
+.cart__Summary {
+  background-color: #181818;
+  padding: 1rem;
+  color: white;
+  max-width: 380px;
+}
+
+@media (max-width: 768px) {
+  .cart__Summary {
+    max-width: auto;
+  }
+}
+
+.cart__Summary .summary__title {
+  font-size: 2.5rem;
+  color: white;
+  font-family: "Scada", sans-serif;
+  font-weight: 200;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+}
+
+.cart__Summary h2 {
+  font-size: 1.4rem;
+  color: white;
+  font-family: "Scada", sans-serif;
+  font-weight: lighter;
+  margin-bottom: 10px;
+}
+
+.cart__Summary span {
+  font-size: 1rem;
+  color: white;
+  font-family: "Scada", sans-serif;
+  font-weight: 600;
+}
+
+.cart__Summary .subtotal,
+.cart__Summary .shipping,
+.cart__Summary .total {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.cart__Summary .subtotal h2,
+.cart__Summary .shipping h2,
+.cart__Summary .total h2 {
+  width: 80%;
+}
+
+.cart__Summary .subtotal {
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+}
+
+.cart__Summary .shipping h2 {
+  padding-right: 10px;
+}
+
+.cart__Summary .total {
+  margin-top: 40px;
+  text-transform: uppercase;
+}
+
+.cart__Summary .total h2,
+.cart__Summary .total span {
+  font-size: 2rem;
+}
+
+.cart__Summary .total h2 {
+  width: auto;
+}
+
+.cart__Summary button {
+  margin-top: 100px;
+}
+/*# sourceMappingURL=cart.css.map */

@@ -10,13 +10,13 @@ const reducer = (state, action) => {
     })
     if (found) {
       return Object.assign({}, state, {
-        state,
+        cart: state.cart,
       })
     } else {
-      state.cart.push({ ...action.payload, quantity: 50 })
-      localStorage.setItem("root", JSON.stringify(state))
+      const updatedCart = [action.payload, ...state.cart]
+      localStorage.setItem("root", JSON.stringify({ cart: updatedCart }))
       return Object.assign({}, state, {
-        state,
+        cart: updatedCart,
       })
     }
   }
