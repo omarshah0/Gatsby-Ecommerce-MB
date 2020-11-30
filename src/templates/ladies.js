@@ -24,6 +24,7 @@ function Ladies({ data: { lady }, cart, addToCart, removeFromCart }) {
                 onClick={() =>
                   setProductImage({ srcSet: image.fluid, title: image.title })
                 }
+                aria-hidden="true"
               >
                 <Img fluid={image.fluid} alt={image.title} />
               </div>

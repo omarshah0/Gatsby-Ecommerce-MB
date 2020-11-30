@@ -1,10 +1,7 @@
 import React from "react"
 import { Link } from "gatsby"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import {
-  faShoppingBasket,
-  faShoppingBag,
-} from "@fortawesome/free-solid-svg-icons"
+import { faShoppingBag } from "@fortawesome/free-solid-svg-icons"
 import logo from "../images/Logo.svg"
 import { connect } from "react-redux"
 
